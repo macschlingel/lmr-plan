@@ -1,0 +1,113 @@
+
+/* styles.css */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.volunteers, .schedule {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.drag-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.draggable-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: move;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.store-column {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button#save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#save-button:hover {
+    background-color: #45a049;
+}
+.draggable-item {
+    display: inline-block; /* Display as an inline-block for proper spacing */
+    padding: 0.5rem 1rem; /* Adjust padding for a pill-like appearance */
+    margin: 0.5rem; /* Space between pills */
+    cursor: pointer; /* Show pointer cursor for draggable items */
+    border-radius: 50px; /* More rounded corners for pills */
+}
+
+.sortable-ghost {
+    opacity: 0.4; /* Ghosting effect for drag-and-drop */
+}
+
+.volunteers {
+    max-width: 100%; /* Ensure volunteer list uses full width */
+    overflow-x: auto; /* Allow horizontal scrolling if pills overflow */
+}
+
+/* Styles for draggable pills */
+.draggable-item {
+    position: relative; /* Set positioning context for the "X" button */
+    display: inline-flex; /* Display as inline-flex for layout control */
+    align-items: center; /* Center content vertically within the pill */
+    padding: 0.5rem 1rem; /* Padding to maintain pill shape */
+    border-radius: 1rem; /* Rounded corners for pill shape */
+    margin: 0.5rem; /* Space between pills */
+    background-color: #007bff; /* Example default color, adjust as needed */
+    color: #fff; /* Text color for readability */
+    cursor: pointer; /* Indicate interactable element */
+    overflow: visible; /* Allow "X" button to float outside */
+    z-index: 1; /* Ensure pill remains on top */
+}
+
+/* Styles for the "X" button within pills */
+.delete-assignment-btn {
+    display: none; /* Initially hide the "X" button */
+    position: absolute; /* Position relative to the pill */
+    top: -5px; /* Center vertically */
+    right: -5px; /* Position near the right edge */
+    /*transform: translateY(-95%); /* Adjust position to float above */
+    padding: 0; /* Minimal padding */
+    background: #ff0000; /* Red background */
+    border: none; /* Remove border for a clean look */
+    color: #ffffff; /* White color for the "X" */
+    font-size: 14px; /* Font size for visibility */
+    font-weight: 500; /* Adjust font weight */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; /* Make it circular */
+    width: 20px; /* Fixed size for consistent appearance */
+    height: 20px; /* Fixed size for consistent appearance */
+    line-height: 18px; /* Align "X" in the center */
+    text-align: center; /* Center "X" within the button */
+    z-index: 2; /* Ensure "X" button floats above the pill */
+}
+
+/* Show the "X" button only when hovering over the pill */
+.draggable-item:hover .delete-assignment-btn {
+    display: block; /* Show the button on hover */
+}
