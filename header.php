@@ -1,3 +1,4 @@
+<?php include_once 'auth/auth.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <title><?php echo $title ?? 'BLMR Rettungsplan'; ?></title>
     <!-- Include the main CSS file -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
             padding-top: 56px; /* Height of the navbar */
@@ -23,5 +24,5 @@
     </style>
 </head>
 <body>
-    <?php include_once 'admin_menu.php'; ?> <!-- Include the admin menu -->
+    <?php if(isAdmin()) include_once 'admin_menu.php'; ?> <!-- Include the admin menu -->
     <div class="container-fluid main-content mt-4">
