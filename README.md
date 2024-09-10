@@ -1,12 +1,3 @@
-It seems there’s a persistent issue with generating the download link for the README file. Let me guide you on how to manually recreate the README file:
-
-### Manual Steps to Create the README.md File
-
-1. **Copy the Content Below into a New File**:
-   - Open your favorite text editor (like VSCode, Notepad++, etc.).
-   - Copy and paste the content below into a new file.
-
-```markdown
 # BLMR Rettungsplan
 
 BLMR Rettungsplan is a web application designed for managing volunteer schedules for a non-profit organization that redistributes leftover groceries from local grocery stores to households in need. The application allows admins to manage volunteers, stores, and their schedules, while volunteers can view their assigned tasks in a read-only mode.
@@ -109,9 +100,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 This project is licensed under the MIT License.
-```
-
-2. **Save the File**:
-   - Save the file as `README.md` in the root directory of your project.
-
-This should give you the complete README file for your project. Let me know if you need further assistance!
